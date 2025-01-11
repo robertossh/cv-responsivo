@@ -70,7 +70,7 @@ body.dark-theme{
 }
 
 /*========== Font resize for CV ==========*/
-body.resize-cv{
+body.scale-cv{
   --font-size-h1: .938rem;
   --font-size-h2: .938rem;
   --font-size-h3: .875rem;
@@ -95,25 +95,25 @@ body.resize-cv{
 }
 
 /*========== Classes modified to resize and print in A4 sheet ==========*/
-.resize-cv .change-theme,
-.resize-cv .generate-pdf{
+.scale-cv .change-theme,
+.scale-cv .generate-pdf{
   display: none;
 }
 
-.resize-cv .bd-container{
+.scale-cv .bd-container{
   max-width: 595px;
 }
 
-.resize-cv .section{
+.scale-cv .section{
   padding: 1.5rem 0 .88rem;
 }
 
-.resize-cv .section-title{
+.scale-cv .section-title{
   margin-bottom: .75rem;
 }
 
-.resize-cv .resume__left,
-.resize-cv  .resume__right{
+.scale-cv .resume__left,
+.scale-cv  .resume__right{
   padding: 0 1rem;
 }
 
@@ -426,8 +426,8 @@ img{
   padding-right: 1rem;
 }
 
-.education__round,
-.experience__round{
+.education__rounder,
+.experience__rounder{
   position: relative;
   display: block;
   width: 16px;
@@ -469,9 +469,7 @@ img{
 /*========== SKILLS AND LANGUAGES ==========*/
 .skills__content,
 .languages__content{
-  display: flex;
   grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
 }
 
 .skills{
