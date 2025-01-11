@@ -1,103 +1,103 @@
-/*==================== MOSTRAR MENU ====================*/
-const mostrarMenu = (toggleId, navId) => {
+/*==================== SHOW MENU ====================*/
+const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
     
-    // Validar se as variáveis existem
+    // Validate if the variables exist
     if (toggle && nav) {
         toggle.addEventListener('click', () => {
-            // Adicionamos a classe show-menu à tag div com a classe nav__menu
+            // Add the show-menu class to the div with the class nav__menu
             nav.classList.toggle('show-menu')
         })
     }
 }
-mostrarMenu('nav-toggle', 'nav-menu')
+showMenu('nav-toggle', 'nav-menu')
 
-/*==================== REMOVER MENU MOBILE ====================*/
+/*==================== REMOVE MOBILE MENU ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
-function acaoLink() {
+function linkAction() {
     const navMenu = document.getElementById('nav-menu')
-    // Quando clicamos em cada nav__link, removemos a classe show-menu
+    // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
 }
-navLink.forEach(n => n.addEventListener('click', acaoLink))
+navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*==================== LINK ATIVO DE SEÇÃO AO ROLAR ====================*/
-const secoes = document.querySelectorAll('section[id]')
+/*==================== ACTIVE SECTION LINK ON SCROLL ====================*/
+const sections = document.querySelectorAll('section[id]')
 
-function rolarAtivo() {
+function setActiveLink() {
     const scrollY = window.pageYOffset
 
-    secoes.forEach(atual => {
-        const alturaSecao = atual.offsetHeight
-        const topoSecao = atual.offsetTop - 50;
-        const idSecao = atual.getAttribute('id')
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute('id')
 
-        if (scrollY > topoSecao && scrollY <= topoSecao + alturaSecao) {
-            document.querySelector('.nav__menu a[href*=' + idSecao + ']').classList.add('active-link')
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
         } else {
-            document.querySelector('.nav__menu a[href*=' + idSecao + ']').classList.remove('active-link')
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
         }
     })
 }
-window.addEventListener('scroll', rolarAtivo)
+window.addEventListener('scroll', setActiveLink)
 
-/*==================== MOSTRAR VOLTAR AO TOPO ====================*/
-function rolarTopo() {
+/*==================== SHOW BACK TO TOP BUTTON ====================*/
+function scrollTop() {
     const scrollTop = document.getElementById('scroll-top');
-    // Quando o scroll for maior que 200px de altura da viewport, adicionamos a classe show-scroll ao link de scroll-top
+    // When the scroll is greater than 200px from the viewport, we add the show-scroll class to the scroll-top link
     if (this.scrollY >= 200) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
 }
-window.addEventListener('scroll', rolarTopo)
+window.addEventListener('scroll', scrollTop)
 
-/*==================== TEMA ESCURO CLARO ====================*/
-const botaoTema = document.getElementById('theme-button')
-const temaEscuro = 'dark-theme'
-const iconeTema = 'bx-sun'
+/*==================== DARK LIGHT THEME ====================*/
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const themeIcon = 'bx-sun'
 
-// Tópico selecionado anteriormente (caso o usuário tenha escolhido)
-const temaSelecionado = localStorage.getItem('selected-theme')
-const iconeSelecionado = localStorage.getItem('selected-icon')
+// Previously selected theme (if the user has chosen one)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
 
-// Obtém o tema atual que a interface está usando, verificando a classe dark-theme
-const obterTemaAtual = () => document.body.classList.contains(temaEscuro) ? 'dark' : 'light'
-const obterIconeAtual = () => botaoTema.classList.contains(iconeTema) ? 'bx-moon' : 'bx-sun'
+// Get the current theme that the interface is using by checking the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(themeIcon) ? 'bx-moon' : 'bx-sun'
 
-// Verificamos se o usuário escolheu um tema anteriormente
-if (temaSelecionado) {
-    // Se a validação for verdadeira, verificamos o que foi escolhido para saber se ativamos ou desativamos o tema escuro
-    document.body.classList[temaSelecionado === 'dark' ? 'add' : 'remove'](temaEscuro)
-    botaoTema.classList[iconeSelecionado === 'bx-moon' ? 'add' : 'remove'](iconeTema)
+// Check if the user has selected a theme before
+if (selectedTheme) {
+    // If true, we check what was chosen to know if we activate or deactivate the dark theme
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](themeIcon)
 }
 
-// Ativar / desativar o tema manualmente com o botão
-botaoTema.addEventListener('click', () => {
-    // Adiciona ou remove o tema escuro / ícone de tema
-    document.body.classList.toggle(temaEscuro)
-    botaoTema.classList.toggle(iconeTema)
-    // Salvamos o tema e o ícone atual que o usuário escolheu
-    localStorage.setItem('selected-theme', obterTemaAtual())
-    localStorage.setItem('selected-icon', obterIconeAtual())
+// Manually activate/deactivate theme with the button
+themeButton.addEventListener('click', () => {
+    // Toggle dark theme / theme icon
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(themeIcon)
+    // Save the current theme and icon the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-/*==================== REDUZIR O TAMANHO E IMPRIMIR EM UMA FOLHA A4 ====================*/
-function reduzirCv() {
+/*==================== REDUCE SIZE AND PRINT ON A4 SHEET ====================*/
+function reduceCv() {
     document.body.classList.add('scale-cv')
 }
 
-/*==================== REMOVER O TAMANHO QUANDO O CV FOR BAIXADO ====================*/
-function removerReduzir() {
+/*==================== REMOVE SIZE WHEN CV IS DOWNLOADED ====================*/
+function removeReduce() {
     document.body.classList.remove('scale-cv')
 }
 
-/*==================== GERAR PDF ====================*/
-// Área gerada para o PDF
+/*==================== GENERATE PDF ====================*/
+// Area generated for the PDF
 let areaCv = document.getElementById('area-cv')
 
-let botaoResume = document.getElementById('resume-button')
+let resumeButton = document.getElementById('resume-button')
 
-// Opções do Html2pdf
+// Html2pdf options
 let opt = {
     margin: 0,
     filename: 'Resume_CV.pdf',
@@ -106,20 +106,20 @@ let opt = {
     jsPDF: { format: 'a4', orientation: 'portrait' }
 }
 
-// Função para chamar a áreaCv e as opções do Html2Pdf
-function gerarCurriculo() {
+// Function to call areaCv and html2pdf options
+function generateResume() {
     html2pdf(areaCv, opt)
 }
 
-// Quando o botão é clicado, ele executa as três funções
-botaoResume.addEventListener('click', () => {
+// When the button is clicked, it executes the three functions
+resumeButton.addEventListener('click', () => {
 
-    // 1. A classe .scale-cv é adicionada ao corpo, onde reduz o tamanho dos elementos
-    reduzirCv()
+    // 1. The .scale-cv class is added to the body, reducing the size of the elements
+    reduceCv()
 
-    // 2. O PDF é gerado
-    gerarCurriculo()
+    // 2. The PDF is generated
+    generateResume()
 
-    // 3. A classe .scale-cv é removida do corpo após 5 segundos para voltar ao tamanho normal
-    setTimeout(removerReduzir, 5000)
+    // 3. The .scale-cv class is removed from the body after 5 seconds to return to normal size
+    setTimeout(removescale, 5000)
 })
