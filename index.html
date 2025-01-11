@@ -1,271 +1,391 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--========== BOX ICONS ==========-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!--========== BOX ICONS ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-        <!--========== CSS ==========-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Responsive resume cv</title>
-    </head>
-    <body>
-        <!--========== HEADER ==========-->
-        <header class="l-header" id="header">
-            <nav class="nav bf-container">
-                <a href="#" class="nav__logo">Smith</a>
+    <title>Currículo Responsivo</title>
+</head>
+<body>
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+        <nav class="nav bf-container">
+            <a href="#" class="nav__logo">Smith</a>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
 
-                        <!-- NAV 1-->
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="bx bx-home nav__icon"></i>Home
-                            </a>
-                        </li>
+                    <!-- NAV 1-->
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="bx bx-home nav__icon"></i>Início
+                        </a>
+                    </li>
 
-                        <!-- NAV 2-->
-                        <li class="nav__item">
-                            <a href="#profile" class="nav__link">
-                                <i class="bx bx-user"></i>Profile
-                            </a>
-                        </li>
+                    <!-- NAV 2-->
+                    <li class="nav__item">
+                        <a href="#profile" class="nav__link">
+                            <i class="bx bx-user"></i>Perfil
+                        </a>
+                    </li>
 
-                        <!-- NAV 3-->
-                        <li class="nav__item">
-                            <a href="#education" class="nav__link">
-                                <i class="bx bx-book"></i>Education
-                            </a>
-                        </li>
+                    <!-- NAV 3-->
+                    <li class="nav__item">
+                        <a href="#education" class="nav__link">
+                            <i class="bx bx-book"></i>Educação
+                        </a>
+                    </li>
 
-                        <!-- NAV 4-->
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="bx bx-receipt"></i>Skills
-                            </a>
-                        </li>
+                    <!-- NAV 4-->
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="bx bx-receipt"></i>Habilidades
+                        </a>
+                    </li>
 
-                        <!-- NAV 5-->
-                        <li class="nav__item">
-                            <a href="#experience" class="nav__link">
-                                <i class="bx bx-briefcase-alt"></i>Experience
-                            </a>
-                        </li>
+                    <!-- NAV 5-->
+                    <li class="nav__item">
+                        <a href="#experience" class="nav__link">
+                            <i class="bx bx-briefcase-alt"></i>Experiência
+                        </a>
+                    </li>
 
-                        <!-- NAV 6-->
-                        <li class="nav__item">
-                            <a href="#certificates" class="nav__link">
-                                <i class="bx bx-award"></i>Certificates
-                            </a>
-                        </li>
+                    <!-- NAV 6-->
+                    <li class="nav__item">
+                        <a href="#certificates" class="nav__link">
+                            <i class="bx bx-award"></i>Certificados
+                        </a>
+                    </li>
 
-                        <!-- NAV 7-->
-                        <li class="nav__item">
-                            <a href="#references" class="nav__link">
-                                <i class="bx bx-link-external"></i>References
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    <!-- NAV 7-->
+                    <li class="nav__item">
+                        <a href="#references" class="nav__link">
+                            <i class="bx bx-link-external"></i>Referências
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="bx bx-grid-alt"></i>
-                </div>
-            </nav>
-            
-        </header>
-
-        <main class="l-main bd-container">
-            <!-- All elements within this div, is generated in PDF -->
-            <div class="resume" id="area-cv">
-                <div class="resume__left">
-                    <!--========== HOME ==========-->
-                    <section class="home" id="home">
-                        <div class="home__container section bd-grid">
-                            <div class="home__data bd-grid">
-                                <img src="assets/img/perfil.jpg" alt="perfil" class="home__img">
-
-                                <h1 class="home__title">SMITH <b>MATTHEW</b></h1>
-                                <h3 class="home__profession">Web developer</h3>
-
-                                <!-- Button to generate and download the pdf. Available for desktop. -->
-                                 <div>
-                                    <a download="" href="assets/pdf/ResumeCv.pdf" class="home__button-movil">Download</a>
-                                </div>
-                            </div>
-                            <div class="home__address bd-grid">
-                                <span class="home__information">
-                                    <i class='bx bx-map home__icon'></i> Av. Bolivar # 123 Lima - peru
-                                </span>
-                                <span class="home__information">
-                                    <i class='bx bx-envelope home__icon'></i> User@email.com
-                                </span>
-                                <span class="home__information">
-                                    <i class='bx bx-phone home__icon'></i> 5571848441544
-                                </span>
-                            </div>
-                        </div>
-                        <!-- Theme change button -->
-                        
-    
-
-                    </section>          
-                    
-                    <!--========== SOCIAL ==========-->
-                    <section class="social section">
-                        <h2 class="section-title">SOCIAL</h2>
-
-                        <div class="social__container bd-grid">
-                            <a href="link" target="_blank" class="social-link">
-                                <i class='bx bx1-linkedin-square social__icon'></i>@smithmat
-                            </a>
-                            <a href="link" target="_blank" class="social-link">
-                                <i class='bx bx1-facebook social__icon'></i>@smithmat
-                            </a>
-                            <a href="link" target="_blank" class="social-link">
-                                <i class='bx bx1-instagram social__icon'></i>@smithmat
-                            </a>
-                        </div>
-                    </section>
-
-                    <!--========== PROFILE ==========-->
-                    <section class="profile section" id="profile">
-                        <h2 class="section-title">Profile</h2>
-
-                        <p class="profile__description">
-                            I am a person, responsible with their work during working hours. Finish various technical and higher studies at
-                            large universities. I have several years of experience and achievements in the labor field.
-                        </p>
-                    </section>
-                    
-                    <!--========== EDUCATION ==========-->
-                    <section class="education section" id="education">
-                        <h2 class="section-title">Education</h2>
-
-                        <div class="education__container bd-grid">
-                            <div class="education__content">
-                                <div class="education__time">
-                                    <span class="education__rounder"></span>
-                                    <span class="education__line"></span>
-                                </div>
-
-                                <div class="ediucation__data bd-grid">
-                                    <h3 class="education__title">MASTER OF DESIGN</h3>
-                                    <span class="education__studies">University od Studies</span>
-                                    <span class="education__year">2010 - 2015</span>
-                                </div>
-                            </div>
-
-
-                            <div class="education__content">
-                                <div class="education__time">
-                                    <span class="education__rounder"></span>
-                                    <span class="education__line"></span>
-                                </div>
-
-                                <div class="ediucation__data bd-grid">
-                                    <h3 class="education__title">WEB DEVELOPER</h3>
-                                    <span class="education__studies">iNSTITUTE sTUDIES</span>
-                                    <span class="education__year">2016 - 2015</span>
-                                </div>
-                            </div>
-
-
-                            <div class="education__content">
-                                <div class="education__time">
-                                <span class="education__rounder"></span>
-                               <!--<span class="education__line"></span> --> 
-                                </div>
-
-                                <div class="ediucation__data bd-grid">
-                                    <h3 class="education__title">MASTER IN UI/UX</h3>
-                                    <span class="education__studies">iNSTITUTE sTUDIES</span>
-                                    <span class="education__year">2019 - 2022</span>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </section>
-
-
-                    <!--========== SKILLS  ==========-->
-                    <section class="skills section" id="skills">
-                        <h2 class="section_title">Skills</h2>
-                        
-                        <div class="skills__content bg-grid">
-                            <ul class="skills__data">
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> Html
-                                </li>
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> Css
-                                </li>
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> Sass
-                                </li>
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> JavaScript
-                                </li>
-                            </ul>
-
-                            <ul class="skills__data">
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> Angular
-                                </li>
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> Firebase
-                                </li>
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> React
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
-                </div>
-
-                <div class="resume__right">
-                    <!--========== EXPERIENCE ==========-->
-                    <section class="experience section" id="experience">
-                        
-                    </section>
-
-                    <!--========== CERTIFICATES ==========-->
-                    <section class="certificate section" id="certificates">
-                        
-                    </section>
-
-                    <!--========== REFERENCES ==========-->
-                    <section class="references section" id="references">
-                        
-                    </section>
-
-                    <!--========== LANGUAGES ==========-->
-                    <section class="languages section">
-                        
-                    </section>
-                    
-                    <!--========== INTERESTS ==========-->
-                    <section class="interests section">
-                        
-                    </section>
-                </div>
-            </div>        
-        </main>
-
-        <!--========== SCROLL TOP ==========-->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+        </nav>
         
+    </header>
 
-        <!--========== HTML2PDF ==========-->
-        <script src="assets/js/html2pdf.bundle.min.js"></script>
+    <main class="l-main bd-container">
+        <!-- Todos os elementos dentro desta div serão gerados no PDF -->
+        <div class="resume" id="area-cv">
+            <div class="resume__left">
+                <!--========== INÍCIO ==========-->
+                <section class="home" id="home">
+                    <div class="home__container section bd-grid">
+                        <div class="home__data bd-grid">
+                            <img src="assets/img/perfil.jpg" alt="perfil" class="home__img">
 
-        <!--========== MAIN JS ==========-->
-        <script src="assets/js/main.js"></script>
-    </body>
+                            <h1 class="home__title">SMITH <b>MATTHEW</b></h1>
+                            <h3 class="home__profession">Desenvolvedor Web</h3>
+
+                            <!-- Botão para gerar e baixar o pdf. Disponível para desktop. -->
+                            <i class="bx bx-download generate-pdf" title="Gerar PDF" id="resume-button"></i>
+                            <div>
+                                <a download="" href="assets/pdf/ResumeCv.pdf" class="home__button-movil">Baixar</a>
+                            </div>
+                        </div>
+                        <div class="home__address bd-grid">
+                            <span class="home__information">
+                                <i class='bx bx-map home__icon'></i> Av. Bolívar #123 Lima - Peru
+                            </span>
+                            <span class="home__information">
+                                <i class='bx bx-envelope home__icon'></i> Usuario@email.com
+                            </span>
+                            <span class="home__information">
+                                <i class='bx bx-phone home__icon'></i> 5571848441544
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Botão para trocar tema -->
+                    <i class="bx bx-moon change-theme" title="Tema" id="theme-button"></i>
+                </section>          
+
+                <!--========== SOCIAL ==========-->
+                <section class="social section">
+                    <h2 class="section-title">SOCIAL</h2>
+
+                    <div class="social__container bd-grid">
+                        <a href="link" target="_blank" class="social-link">
+                            <i class='bx bx1-linkedin-square social__icon'></i>@smithmat
+                        </a>
+                        <a href="link" target="_blank" class="social-link">
+                            <i class='bx bx1-facebook social__icon'></i>@smithmat
+                        </a>
+                        <a href="link" target="_blank" class="social-link">
+                            <i class='bx bx1-instagram social__icon'></i>@smithmat
+                        </a>
+                    </div>
+                </section>
+
+                <!--========== PERFIL ==========-->
+                <section class="profile section" id="profile">
+                    <h2 class="section-title">Perfil</h2>
+
+                    <p class="profile__description">
+                        Sou uma pessoa responsável com o trabalho durante o expediente. Concluí diversos estudos técnicos e superiores em grandes universidades. Tenho vários anos de experiência e conquistas na área profissional.
+                    </p>
+                </section>
+                
+                <!--========== EDUCAÇÃO ==========-->
+                <section class="education section" id="education">
+                    <h2 class="section-title">Educação</h2>
+
+                    <div class="education__container bd-grid">
+                        <div class="education__content">
+                            <div class="education__time">
+                                <span class="education__rounder"></span>
+                                <span class="education__line"></span>
+                            </div>
+
+                            <div class="ediucation__data bd-grid">
+                                <h3 class="education__title">MESTRADO EM DESIGN</h3>
+                                <span class="education__studies">Universidade dos Estudos</span>
+                                <span class="education__year">2010 - 2015</span>
+                            </div>
+                        </div>
+
+                        <div class="education__content">
+                            <div class="education__time">
+                                <span class="education__rounder"></span>
+                                <span class="education__line"></span>
+                            </div>
+
+                            <div class="ediucation__data bd-grid">
+                                <h3 class="education__title">DESENVOLVEDOR WEB</h3>
+                                <span class="education__studies">Instituto de Estudos</span>
+                                <span class="education__year">2016 - 2015</span>
+                            </div>
+                        </div>
+
+                        <div class="education__content">
+                            <div class="education__time">
+                                <span class="education__rounder"></span>
+                            </div>
+
+                            <div class="ediucation__data bd-grid">
+                                <h3 class="education__title">MESTRADO EM UI/UX</h3>
+                                <span class="education__studies">Instituto de Estudos</span>
+                                <span class="education__year">2019 - 2022</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!--========== HABILIDADES  ==========-->
+                <section class="skills section" id="skills">
+                    <h2 class="section_title">Habilidades</h2>
+                    
+                    <div class="skills__content bg-grid">
+                        <ul class="skills__data">
+                            <li class="skills__name">
+                                <span class="skills__circle"></span> Html
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span> Css
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span> Sass
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span> JavaScript
+                            </li>
+                        </ul>
+
+                        <ul class="skills__data">
+                            <li class="skills__name">
+                                <span class="skills__circle"></span> Angular
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span> Firebase
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span> React
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="resume__right">
+                <!--========== EXPERIÊNCIA ==========-->
+                <section class="experience section" id="experience">
+                    <h2 class="section-title">Experiência</h2>
+                </section>
+
+                <div class="experience__container bd-grid">
+                    <div class="experience__content">
+                        <div class="experience__time">
+                            <span class="experience__rounder"></span>
+                            <span class="experience__line"></span>
+                        </div>
+
+                        <div class="experience__data bd-grid">
+                            <h3 class="experience__title">MESTRADO EM DESIGN</h3>
+                            <span class="experience__company">De 2013 a 2015 | Tech Soft</span>
+                            <p class="experience__description">
+                                Trabalhei nesta empresa com total responsabilidade, oferecendo os melhores resultados e aumentando a produtividade.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="experience__content">
+                        <div class="experience__time">
+                            <span class="experience__rounder"></span>
+                            <span class="experience__line"></span>
+                        </div>
+
+                        <div class="experience__data bd-grid">
+                            <h3 class="experience__title">ÁREA DE DESIGN UI/UX</h3>
+                            <span class="experience__company">De 2013 a 2015 | Adobe</span>
+                            <p class="experience__description">
+                                Trabalhei nesta empresa com total responsabilidade, oferecendo os melhores resultados e aumentando a produtividade.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="experience__content">
+                        <div class="experience__time">
+                            <span class="experience__rounder"></span>
+                        </div>
+
+                        <div class="experience__data bd-grid">
+                            <h3 class="experience__title">DESENVOLVEDOR DE APLICAÇÕES MÓVEIS</h3>
+                            <span class="experience__company">De 2019 a 2021 | App Tech</span>
+                            <p class="experience__description">
+                                Trabalhei nesta empresa com total responsabilidade, oferecendo os melhores resultados e aumentando a produtividade.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--========== CERTIFICADOS ==========-->
+                <section class="certificate section" id="certificates">
+                    <h2 class="section-title">Certificados</h2>
+
+                    <div class="certificate__container bg-grid">
+                        <div class="certificate__content">
+                            <h3 class="certificate__title">
+                                Certificado de conformidade na área de trabalho (2012)
+                            </h3>
+                            <p class="certificate__description">
+                                Pelo cumprimento das expectativas ao liderar a equipe nas tarefas definidas no campo de trabalho.
+                            </p>
+                        </div>
+
+                        <div class="certificate__content">
+                            <h3 class="certificate__title">
+                                Certificado de conformidade na área de trabalho (2012)
+                            </h3>
+                            <p class="certificate__description">
+                                Pelo cumprimento das expectativas ao liderar a equipe nas tarefas definidas no campo de trabalho.
+                            </p>
+                        </div>
+
+                        <div class="certificate__content">
+                            <h3 class="certificate__title">
+                                Certificado de conformidade na área de trabalho (2012)
+                            </h3>
+                            <p class="certificate__description">
+                                Pelo cumprimento das expectativas ao liderar a equipe nas tarefas definidas no campo de trabalho.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!--========== REFERÊNCIAS ==========-->
+                <section class="references section" id="references">
+                    <h2 class="section-title">Referências</h2>
+
+                    <div class="references__container bd-grid">
+                        <div class="references__content bd-grid">
+                            <span class="references__subtitle">Sr. Diretor</span>
+                            <h3 class="references__title">Sr. Clay Doe</h3>
+                            <ul class="references__contact">
+                                <li>Telefone: 999-777-666</li>
+                                <li>Email: usuario@email.com</li>
+                            </ul>
+                        </div>
+
+                        <div class="references__content bd-grid">
+                            <span class="references__subtitle">Mag. Desenvolvedor</span>
+                            <h3 class="references__title">Sr. Robbinson Bass</h3>
+                            <ul class="references__contact">
+                                <li>Telefone: 999-777-666</li>
+                                <li>Email: usuario@email.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!--========== IDIOMAS ==========-->
+                <section class="languages section">
+                    <h2 class="section-title">Idiomas</h2>
+
+                    <div class="languages__container">
+                        <ul class="languages__content bd-grid">
+                            <li class="languages__name">
+                                <span class="languages__circle"></span> Espanhol
+                            </li>
+                            <li class="languages__name">
+                                <span class="languages__circle"></span> Inglês
+                            </li>
+                            <li class="languages__name">
+                                <span class="languages__circle"></span> Francês
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!--========== INTERESSES ==========-->
+                <section class="interests section">
+                    <h2 class="section-title">Interesses</h2>
+
+                    <div class="interests__container bg-grid">
+                        <div class="interestts__content">
+                            <i class="bx bxs-plane-alt interests__icon"></i>
+                            <span class="interests__name">Viajar</span>
+                        </div>
+
+                        <div class="interestts__content">
+                            <i class="bx bx-book interests__icon"></i>
+                            <span class="interests__name">Livros</span>
+                        </div>
+
+                        <div class="interestts__content">
+                            <i class="bx bx-dumbbell interests__icon"></i>
+                            <span class="interests__name">Fitness</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>        
+    </main>
+
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
+    </a>
+
+    <!--========== HTML2PDF ==========-->
+    <script src="assets/js/html2pdf.bundle.min.js"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
